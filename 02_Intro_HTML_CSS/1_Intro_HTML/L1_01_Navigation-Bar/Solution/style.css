@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    text-align: center;
+    list-style-position: inside;
+}
+
+nav {
+    background: #234465;
+    margin: 0;
+    padding: 15px;
+}
+
+nav li {
+    padding: 0 40px;
+    display: inline-block;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+}
