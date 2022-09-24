@@ -14,4 +14,11 @@ function solve() {
     let resText = res.join(". ") + ".";
     output.innerHTML += `<p>${resText}</p>`;
   }
+
+  // while(arrayText.length > 0) {
+  //   let textParagraph = arrayText.splice(0, 3).join(". ") + ".";
+  //   let p = document.createElement("p");
+  //   p.textContent = textParagraph;
+  //   output.appendChild(p);
+  // }
 }
