@@ -1,7 +1,7 @@
 class Point {
     static distance(first, second) {
-        let dx = second.x - first.y;
-        let dy = second.y - first.x;
+        let dx = first.x - second.x;
+        let dy = first.y - second.y;
 
         return Math.sqrt(dx ** 2 + dy ** 2);
     }
