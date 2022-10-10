@@ -3,6 +3,7 @@ function toStringExtension() {
         this.name = name;
         this.email = email;
     }
+
     Person.prototype.toString = function () {
         return `Person (name: ${this.name}, email: ${this.email})`;
     }
@@ -11,6 +12,7 @@ function toStringExtension() {
         Person.call(this, name, email);
         this.subject = subject;
     }
+
     Teacher.prototype = Object.create(Person.prototype);
     Teacher.prototype.constructor = Teacher;
     Teacher.prototype.toString = function () {
@@ -21,6 +23,7 @@ function toStringExtension() {
         Person.call(this, name, email);
         this.course = course;
     }
+    
     Student.prototype = Object.create(Person.prototype);
     Student.prototype.constructor = Student;
     Student.prototype.toString = function () {
@@ -39,6 +42,10 @@ let Person = classes.Person;
 let Teacher = classes.Teacher;
 let Student = classes.Student;
 
-let t = new Teacher("Ivan", 'ivan__@ivanov.com', "Graphics");
-console.log(t);
+let p = new Person("Pesho",'Pesho@peshev.com');
+let t = new Teacher("Ivan",'ivan@ivanov.com',"History");
+let s = new Student('Gosho', 'gosho@goshev.bg', 'Art');
+
+console.log(p.toString());
 console.log(t.toString());
+console.log(s.toString());
