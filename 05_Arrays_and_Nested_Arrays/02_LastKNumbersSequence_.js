@@ -1,20 +1,15 @@
-function solver(length, k) {
-    let outputArr = [1];
-
-    for(let i = 1; i < length; i++){
-        outputArr[i] = sumLastK(outputArr, k);
-    }
-    // console.log(k); // k has changed after calling sumLastK
-    console.log(outputArr);
- 
-    function sumLastK(arr, k) {
-        k = arr.length>k ? k : arr.length;
-        let sum = 0;
-
-        for(let i = 1; i <= k; i++){
-            sum += arr[arr.length - i];
+function firstKNumbers(n, k) {
+    const result = [1];
+    for (let i = 1; i < n; i++) {
+        let element = 0;
+        for (let j = i - k; j < i; j++) {
+            element += result[j] ? result[j] : 0;
         }
-        return sum;
+        result.push(element);
     }
+
+    return result;
 }
-solver(6,3);
+
+console.log(firstKNumbers(6, 3));
+console.log(firstKNumbers(8, 2));
